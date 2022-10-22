@@ -1,0 +1,4 @@
+services:
+  timezone_service.date_time:
+    class: Drupal\specbee_date_as_per_timezone\TimezoneServices
+    arguments: ['@config.manager']
