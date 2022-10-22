@@ -1,0 +1,32 @@
+name: specbee
+recipe: drupal9
+config:
+  webroot: web
+  xdebug: true
+  php: '8.1'
+  drush: ^10
+services:
+  database:
+    app_mount: disabled
+    type: mariadb
+    creds:
+      user: drupal
+      password: drupal
+  pma:
+    app_mount: disabled
+    scanner: false
+    type: phpmyadmin
+    hosts:
+      - database
+  mailhog:
+    app_mount: disabled
+    scanner: false
+    type: 'mailhog:v1.0.0'
+    portforward: false
+    hogfrom:
+      - appserver
+proxy:
+  pma:
+    - pma.japanphil.lando.site
+  mailhog:
+    - mail.japanphil.lando.site

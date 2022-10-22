@@ -1,0 +1,7 @@
+date_as_per_timezone.admin_settings:
+  path: '/admin/config/date-as-per-timezone'
+  defaults:
+   _form: '\Drupal\specbee_date_as_per_timezone\Form\TimeZoneConfigurationForm'
+   _title: 'Date as per Timezone'
+  requirements:
+    _permission: 'administer site configuration'
