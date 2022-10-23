@@ -1,0 +1,20 @@
+uuid: 2b3c0fed-5f93-42ad-99bf-0296c3b0a375
+langcode: en
+status: true
+dependencies:
+  module:
+    - specbee_date_as_per_timezone
+  theme:
+    - olivero
+id: timezoneblock
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: timezone_block
+settings:
+  id: timezone_block
+  label: 'Timezone Block'
+  label_display: visible
+  provider: specbee_date_as_per_timezone
+visibility: {  }

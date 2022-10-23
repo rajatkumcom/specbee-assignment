@@ -6,3 +6,4 @@ dependencies:
 - node
 - block
 type: module
+configure: date_as_per_timezone.admin_settings

@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function specbee_date_as_per_timezone_theme($existing, $type, $theme, $path) {
+  return [
+    'timezone_block' => [
+      'variables' => ['data' => NULL],
+    ],
+  ];
+}

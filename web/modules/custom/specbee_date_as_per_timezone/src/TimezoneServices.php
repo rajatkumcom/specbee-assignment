@@ -34,7 +34,12 @@ class TimezoneServices {
 
     $date = new DrupalDateTime();
     $date->setTimezone(new \DateTimeZone($this->configManager->get('timezone')));
-    return $date->format('m/d/Y g:i a');
+    return [
+      'time' => $date->format('g:i a'),
+      'date' => $date->format('l, d F Y'),
+      'city' => $this->configManager->get('city'),
+      'country' => $this->configManager->get('country'),
+    ];
   }
 
 }
